@@ -1,0 +1,38 @@
+Loading mlx-community/Qwen3-4B-4bit ...
+Attention exactness (fp32, 4096 tokens, 4 devices): max abs error 1.24e-03
+Warming up ...
+
+=== prompt: 4086 tokens ===
+  chunked  TTFT    1.56s     2627 tok/s  peak  3.90 GB  needle found  -> 'CRIMSON-OTTER-7731<|im_end|>'
+  full     TTFT    1.73s     2366 tok/s  peak  4.94 GB  needle found  -> 'CRIMSON-OTTER-7731<|im_end|>'
+  ring     TTFT    3.95s     1035 tok/s  peak  4.69 GB  needle found  -> 'CRIMSON-OTTER-7731<|im_end|>'
+  ring vs full: max logit diff 0.5000 (chunked vs full, i.e. normal bf16 noise: 0.3125), same first token: True
+  projected on 4 real devices: compute 0.43-0.69s, K/V traffic per device 0.45 GB ≈ 0.09s at 5.0 GB/s (hidden only if ≤ compute); KV cache per device 0.15 GB vs 0.60 GB
+
+=== prompt: 8315 tokens ===
+  chunked  TTFT    3.60s     2307 tok/s  peak  4.29 GB  needle found  -> 'CRIMSON-OTTER-7731<|im_end|>'
+  full     TTFT    3.99s     2084 tok/s  peak  7.00 GB  needle found  -> 'CRIMSON-OTTER-7731<|im_end|>'
+  ring     TTFT   12.63s      658 tok/s  peak  6.91 GB  needle found  -> 'CRIMSON-OTTER-7731<|im_end|>'
+  ring vs full: max logit diff 0.5781 (chunked vs full, i.e. normal bf16 noise: 0.5312), same first token: True
+  projected on 4 real devices: compute 1.00-1.60s, K/V traffic per device 0.92 GB ≈ 0.18s at 5.0 GB/s (hidden only if ≤ compute); KV cache per device 0.31 GB vs 1.23 GB
+
+=== prompt: 16416 tokens ===
+  chunked  TTFT    9.21s     1782 tok/s  peak  5.48 GB  needle found  -> 'CRIMSON-OTTER-7731<|im_end|>'
+  full     TTFT    9.68s     1696 tok/s  peak 11.26 GB  needle found  -> 'CRIMSON-OTTER-7731<|im_end|>'
+  ring     TTFT   37.95s      433 tok/s  peak 11.26 GB  needle found  -> 'CRIMSON-OTTER-7731<|im_end|>'
+  ring vs full: max logit diff 0.5781 (chunked vs full, i.e. normal bf16 noise: 0.5078), same first token: True
+  projected on 4 real devices: compute 2.42-3.87s, K/V traffic per device 1.82 GB ≈ 0.36s at 5.0 GB/s (hidden only if ≤ compute); KV cache per device 0.61 GB vs 2.42 GB
+
+=== prompt: 32598 tokens ===
+  chunked  TTFT   28.43s     1147 tok/s  peak  7.89 GB  needle found  -> 'CRIMSON-OTTER-7731<|im_end|>'
+  full     TTFT   30.22s     1079 tok/s  peak 19.65 GB  needle found  -> 'CRIMSON-OTTER-7731<|im_end|>'
+  ring     TTFT  159.11s      205 tok/s  peak 19.65 GB  needle found  -> 'CRIMSON-OTTER-7731<|im_end|>'
+  ring vs full: max logit diff 0.6875 (chunked vs full, i.e. normal bf16 noise: 0.4375), same first token: True
+  projected on 4 real devices: compute 7.55-12.09s, K/V traffic per device 3.61 GB ≈ 0.72s at 5.0 GB/s (hidden only if ≤ compute); KV cache per device 1.20 GB vs 4.81 GB
+
+Summary (TTFT seconds)
+  tokens  chunked     full  ring-sim  proj 4dev   comm  logit diff
+    4086     1.56     1.73      3.95       0.43   0.09      0.5000
+    8315     3.60     3.99     12.63       1.00   0.18      0.5781
+   16416     9.21     9.68     37.95       2.42   0.36      0.5781
+   32598    28.43    30.22    159.11       7.55   0.72      0.6875
