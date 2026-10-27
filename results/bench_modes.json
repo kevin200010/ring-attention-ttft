@@ -1,0 +1,158 @@
+{
+  "experiment": "bench_modes",
+  "note": "Measured with the v0.1 scripts (same algorithms); converted from results/legacy_*.txt",
+  "env": {
+    "chip": "Apple M5 Pro",
+    "memory_gb": 24,
+    "os": "macOS 27.0.1",
+    "python": "3.14.7",
+    "mlx": "0.32.4",
+    "mlx_lm": "0.32.2"
+  },
+  "model": "mlx-community/Qwen3-4B-4bit",
+  "devices": 4,
+  "layout": "contiguous",
+  "exactness_fp32_max_err": 0.00124,
+  "runs": [
+    {
+      "mode": "chunked",
+      "tokens": 4086,
+      "ttft_s": 1.56,
+      "tokens_per_s": 2627.0,
+      "peak_gb": 3.9,
+      "needle_found": true,
+      "answer": "CRIMSON-OTTER-7731<|im_end|>",
+      "n_dev": null,
+      "layout": null,
+      "logit_diff_vs_full": 0.3125
+    },
+    {
+      "mode": "full",
+      "tokens": 4086,
+      "ttft_s": 1.73,
+      "tokens_per_s": 2366.0,
+      "peak_gb": 4.94,
+      "needle_found": true,
+      "answer": "CRIMSON-OTTER-7731<|im_end|>",
+      "n_dev": null,
+      "layout": null
+    },
+    {
+      "mode": "ring",
+      "tokens": 4086,
+      "ttft_s": 3.95,
+      "tokens_per_s": 1035.0,
+      "peak_gb": 4.69,
+      "needle_found": true,
+      "answer": "CRIMSON-OTTER-7731<|im_end|>",
+      "n_dev": 4,
+      "layout": "contiguous",
+      "logit_diff_vs_full": 0.5
+    },
+    {
+      "mode": "chunked",
+      "tokens": 8315,
+      "ttft_s": 3.6,
+      "tokens_per_s": 2307.0,
+      "peak_gb": 4.29,
+      "needle_found": true,
+      "answer": "CRIMSON-OTTER-7731<|im_end|>",
+      "n_dev": null,
+      "layout": null,
+      "logit_diff_vs_full": 0.5312
+    },
+    {
+      "mode": "full",
+      "tokens": 8315,
+      "ttft_s": 3.99,
+      "tokens_per_s": 2084.0,
+      "peak_gb": 7.0,
+      "needle_found": true,
+      "answer": "CRIMSON-OTTER-7731<|im_end|>",
+      "n_dev": null,
+      "layout": null
+    },
+    {
+      "mode": "ring",
+      "tokens": 8315,
+      "ttft_s": 12.63,
+      "tokens_per_s": 658.0,
+      "peak_gb": 6.91,
+      "needle_found": true,
+      "answer": "CRIMSON-OTTER-7731<|im_end|>",
+      "n_dev": 4,
+      "layout": "contiguous",
+      "logit_diff_vs_full": 0.5781
+    },
+    {
+      "mode": "chunked",
+      "tokens": 16416,
+      "ttft_s": 9.21,
+      "tokens_per_s": 1782.0,
+      "peak_gb": 5.48,
+      "needle_found": true,
+      "answer": "CRIMSON-OTTER-7731<|im_end|>",
+      "n_dev": null,
+      "layout": null,
+      "logit_diff_vs_full": 0.5078
+    },
+    {
+      "mode": "full",
+      "tokens": 16416,
+      "ttft_s": 9.68,
+      "tokens_per_s": 1696.0,
+      "peak_gb": 11.26,
+      "needle_found": true,
+      "answer": "CRIMSON-OTTER-7731<|im_end|>",
+      "n_dev": null,
+      "layout": null
+    },
+    {
+      "mode": "ring",
+      "tokens": 16416,
+      "ttft_s": 37.95,
+      "tokens_per_s": 433.0,
+      "peak_gb": 11.26,
+      "needle_found": true,
+      "answer": "CRIMSON-OTTER-7731<|im_end|>",
+      "n_dev": 4,
+      "layout": "contiguous",
+      "logit_diff_vs_full": 0.5781
+    },
+    {
+      "mode": "chunked",
+      "tokens": 32598,
+      "ttft_s": 28.43,
+      "tokens_per_s": 1147.0,
+      "peak_gb": 7.89,
+      "needle_found": true,
+      "answer": "CRIMSON-OTTER-7731<|im_end|>",
+      "n_dev": null,
+      "layout": null,
+      "logit_diff_vs_full": 0.4375
+    },
+    {
+      "mode": "full",
+      "tokens": 32598,
+      "ttft_s": 30.22,
+      "tokens_per_s": 1079.0,
+      "peak_gb": 19.65,
+      "needle_found": true,
+      "answer": "CRIMSON-OTTER-7731<|im_end|>",
+      "n_dev": null,
+      "layout": null
+    },
+    {
+      "mode": "ring",
+      "tokens": 32598,
+      "ttft_s": 159.11,
+      "tokens_per_s": 205.0,
+      "peak_gb": 19.65,
+      "needle_found": true,
+      "answer": "CRIMSON-OTTER-7731<|im_end|>",
+      "n_dev": 4,
+      "layout": "contiguous",
+      "logit_diff_vs_full": 0.6875
+    }
+  ]
+}

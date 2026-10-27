@@ -1,0 +1,53 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 420' width='720' height='420' font-family='-apple-system,Segoe UI,Helvetica,Arial,sans-serif'>
+<rect width='720' height='420' fill='#ffffff'/>
+<text x='64' y='30' font-size='17' font-weight='600' fill='#1f2328'>Scaling efficiency (zigzag layout)</text>
+<text x='64' y='50' font-size='12.5' fill='#59636e'>speedup / devices: 100% = perfect linear scaling; longer prompts scale better</text>
+<line x1='64' x2='570' y1='364.0' y2='364.0' stroke='#d8dee4'/>
+<text x='56' y='368.0' font-size='11' fill='#59636e' text-anchor='end'>60</text>
+<line x1='64' x2='570' y1='290.5' y2='290.5' stroke='#d8dee4'/>
+<text x='56' y='294.5' font-size='11' fill='#59636e' text-anchor='end'>70</text>
+<line x1='64' x2='570' y1='217.0' y2='217.0' stroke='#d8dee4'/>
+<text x='56' y='221.0' font-size='11' fill='#59636e' text-anchor='end'>80</text>
+<line x1='64' x2='570' y1='143.5' y2='143.5' stroke='#d8dee4'/>
+<text x='56' y='147.5' font-size='11' fill='#59636e' text-anchor='end'>90</text>
+<line x1='64' x2='570' y1='70.0' y2='70.0' stroke='#d8dee4'/>
+<text x='56' y='74.0' font-size='11' fill='#59636e' text-anchor='end'>100</text>
+<text x='16' y='217.0' font-size='12' fill='#59636e' transform='rotate(-90 16 217.0)' text-anchor='middle'>Efficiency (%)</text>
+<text x='127.2' y='382' font-size='11.5' fill='#59636e' text-anchor='middle'>1 device</text>
+<text x='253.8' y='382' font-size='11.5' fill='#59636e' text-anchor='middle'>2 devices</text>
+<text x='380.2' y='382' font-size='11.5' fill='#59636e' text-anchor='middle'>4 devices</text>
+<text x='506.8' y='382' font-size='11.5' fill='#59636e' text-anchor='middle'>8 devices</text>
+<text x='317.0' y='408' font-size='12' fill='#59636e' text-anchor='middle'>Ring size</text>
+<polyline points='127.2,70.0 253.8,70.0 380.2,70.0 506.8,70.0' fill='none' stroke='#59636e' stroke-width='2.4' stroke-dasharray='5 4'/>
+<line x1='586' x2='604' y1='76' y2='76' stroke='#59636e' stroke-width='3' stroke-dasharray='5 4'/>
+<text x='610' y='80' font-size='11.5' fill='#1f2328'>ideal</text>
+<polyline points='127.2,70.0 253.8,88.4 380.2,138.0 506.8,224.3' fill='none' stroke='#2f6fdb' stroke-width='2.4'/>
+<circle cx='127.2' cy='70.0' r='4' fill='#2f6fdb'/>
+<text x='127.2' y='88.0' font-size='10.5' fill='#2f6fdb' font-weight='600' text-anchor='middle'>100%</text>
+<circle cx='253.8' cy='88.4' r='4' fill='#2f6fdb'/>
+<text x='253.8' y='106.4' font-size='10.5' fill='#2f6fdb' font-weight='600' text-anchor='middle'>98%</text>
+<circle cx='380.2' cy='138.0' r='4' fill='#2f6fdb'/>
+<text x='380.2' y='156.0' font-size='10.5' fill='#2f6fdb' font-weight='600' text-anchor='middle'>91%</text>
+<circle cx='506.8' cy='224.3' r='4' fill='#2f6fdb'/>
+<text x='506.8' y='242.3' font-size='10.5' fill='#2f6fdb' font-weight='600' text-anchor='middle'>79%</text>
+<line x1='586' x2='604' y1='96' y2='96' stroke='#2f6fdb' stroke-width='3'/>
+<text x='610' y='100' font-size='11.5' fill='#1f2328'>8k tokens</text>
+<polyline points='127.2,70.0 253.8,77.4 380.2,101.2 506.8,143.5' fill='none' stroke='#d1661f' stroke-width='2.4'/>
+<circle cx='127.2' cy='70.0' r='4' fill='#d1661f'/>
+<circle cx='253.8' cy='77.4' r='4' fill='#d1661f'/>
+<circle cx='380.2' cy='101.2' r='4' fill='#d1661f'/>
+<circle cx='506.8' cy='143.5' r='4' fill='#d1661f'/>
+<line x1='586' x2='604' y1='116' y2='116' stroke='#d1661f' stroke-width='3'/>
+<text x='610' y='120' font-size='11.5' fill='#1f2328'>16k tokens</text>
+<polyline points='127.2,70.0 253.8,132.5 380.2,114.1 506.8,134.3' fill='none' stroke='#2a9d6f' stroke-width='2.4'/>
+<circle cx='127.2' cy='70.0' r='4' fill='#2a9d6f'/>
+<text x='127.2' y='61.0' font-size='10.5' fill='#2a9d6f' font-weight='600' text-anchor='middle'>100%</text>
+<circle cx='253.8' cy='132.5' r='4' fill='#2a9d6f'/>
+<text x='253.8' y='123.5' font-size='10.5' fill='#2a9d6f' font-weight='600' text-anchor='middle'>92%</text>
+<circle cx='380.2' cy='114.1' r='4' fill='#2a9d6f'/>
+<text x='380.2' y='105.1' font-size='10.5' fill='#2a9d6f' font-weight='600' text-anchor='middle'>94%</text>
+<circle cx='506.8' cy='134.3' r='4' fill='#2a9d6f'/>
+<text x='506.8' y='125.3' font-size='10.5' fill='#2a9d6f' font-weight='600' text-anchor='middle'>91%</text>
+<line x1='586' x2='604' y1='136' y2='136' stroke='#2a9d6f' stroke-width='3'/>
+<text x='610' y='140' font-size='11.5' fill='#1f2328'>32k tokens</text>
+</svg>

@@ -1,0 +1,23 @@
+{
+  "experiment": "distributed_attention",
+  "env": {
+    "chip": "Apple M5 Pro",
+    "memory_gb": 24,
+    "os": "macOS 27.0.1",
+    "python": "3.14.7",
+    "mlx": "0.32.4",
+    "mlx_lm": "0.32.2"
+  },
+  "ranks": 1,
+  "layout": "zigzag",
+  "seq_len": 16384,
+  "heads": 32,
+  "kv_heads": 8,
+  "head_dim": 128,
+  "dtype": "bfloat16",
+  "wall_s": 0.805162787437439,
+  "compute_s": 0.8016131520271301,
+  "comm_s": 0,
+  "bytes_sent_per_rank": 0,
+  "max_abs_err": 0.015625
+}

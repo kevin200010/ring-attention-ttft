@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ring-ttft"
+version = "0.2.0"
+description = "Ring Attention vs time-to-first-token for long-context RAG on Apple Silicon (MLX)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Kevin Patel" }]
+requires-python = ">=3.10"
+dependencies = ["mlx>=0.32", "mlx-lm>=0.32"]
+keywords = ["ring-attention", "llm", "rag", "ttft", "mlx", "apple-silicon", "context-parallelism"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: MacOS",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Repository = "https://github.com/kevin200010/ring-attention-ttft"
+
+[project.scripts]
+ring-ttft-bench = "ring_ttft.bench:main"
+ring-ttft-proof = "ring_ttft.proof:main"
+ring-ttft-dist = "ring_ttft.dist_bench:main"
+ring-ttft-report = "ring_ttft.report:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ring_ttft"]
